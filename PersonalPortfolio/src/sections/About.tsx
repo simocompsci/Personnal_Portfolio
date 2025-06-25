@@ -3,7 +3,6 @@ import Card from "@/components/Card";
 import StarIcon from '@/assets/icons/star.svg'
 import bookImage from '@/assets/images/book-cover.png'
 import Image from "next/image";
-import { title } from "process";
 import JavascriptIcon from '@/assets/icons/square-js.svg'
 import HTMLIcon from '@/assets/icons/html5.svg'
 import CssIcon from '@/assets/icons/css3.svg'
@@ -109,9 +108,9 @@ export const AboutSection = () => {
               <CardHeader
                 title="My Toolbox"
                 description="Explore the technologies and tools used to create digital experience"
-                className=""
+                
               />
-              <ToolBoxItems Items={toolboxItems} className="" />
+              <ToolBoxItems Items={toolboxItems} className="text-white" />
               <ToolBoxItems
                 Items={toolboxItems}
                 className="mt-6"
@@ -119,14 +118,14 @@ export const AboutSection = () => {
               />
             </Card>
           </div>
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-4">
             <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2">
               <CardHeader title="Beyond The Code" description="Explore my interests and hobbies beyond the code" className="px-6 py-6" />
 
 
               <div className="flex-1">
                 {Hobbies.map((Hobby) => (
-                  <div key={Hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  <div key={Hobby.title} className="inline-flex items-center gap-2 px-6 bg-white rounded-full py-1.5 absolute"
                     style={{
                       left: Hobby.left,
                       top: Hobby.top,
@@ -137,9 +136,9 @@ export const AboutSection = () => {
                 ))}
               </div>
             </Card>
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-2">
               <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-white after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <Image src={smileMemoji} alt="smile memoji" className="size-20" />
 
               </div>
